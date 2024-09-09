@@ -1,0 +1,92 @@
+User Interface Enhancements:
+
+    Menu System: Integrated Swing's JMenuBar across the frame's top, replacing the "Menu display & Menu buttons" component for enhanced navigation efficiency. Added an "Exit" feature for streamlined user control.
+
+    Scroll Functionality: Implemented Swing's JScrollPane on the right side of the "Chat display" component, replacing the "Scroll bar" for improved usability.
+
+    Player and Opponent Fleet Info: Revised game feedback by removing progress indicators, showing ships as sunk only upon complete destruction.
+
+    Visual Changes: Optimized space previously occupied by the "Menu display & Menu buttons" component for enhanced display of the "Logo/Title" component.
+
+Screen and Component Adjustments:
+
+    Frame Resizing: Adjusted frame size from 1920 x 1078 pixels to 1280 x 714 pixels, optimized for smaller screens.
+
+    Grid Tile Size: Reduced frame grid tile sizes from 80 x 77 pixels to 53 x 51 pixels for improved visual clarity and efficiency.
+
+Component Sizing Updates:
+
+    Title: Resized from 1120 x 154 pixels to 742 x 153 pixels.
+
+    Playing Field: Adjusted from 1120 x 847 pixels to 742 x 561 pixels.
+
+    Game Board: Modified from 800 x 770 pixels to 530 x 510 pixels.
+
+    Menu Display and Buttons: Integrated default JMenuBar for streamlined functionality.
+
+    Turn Indicator and Counters: Re-factored from 800 x 154 pixels to 530 x 102 pixels.
+
+    Player and Opponent Fleet Information: Optimized from 400 x 385 pixels to 265 x 255 pixels each.
+
+    Chat Display: Adjusted from 760 x 462 pixels to 530 x 257 pixels.
+
+    Text Field: Resized from 800 x 77 pixels to 530 x 51 pixels.
+
+    Scroll Bar: Utilized default JScrollPane for improved scrolling experience.
+
+Menu Consolidation:
+
+    Consolidated "Help" and "About" menus into a unified "Info" menu item for clearer navigation.
+
+Code Re-factoring and Optimization:
+
+    Removed Redundant Classes:
+        GridModel: Replaced with an array of integers in BattleshipModel.
+        CellModel: Replaced with integers representing grid states in BattleshipModel.
+        CPUPlayerModel: Redundant functionality merged with opponent functions and removed.
+
+    Class and Method Renaming:
+        ShipPlacementController: Renamed to ShipController for expanded functionalities.
+        GameFlowController: Renamed to GameController for clearer responsibility alignment.
+
+    BattleshipController:
+        Re-factored naming conventions for improved clarity and alignment with responsibilities.
+
+New Features:
+
+    Localization Support: Introduced LocalizationLoader class for in-game translations.
+
+    Font Support: Implemented FontLoader class for custom font initialization.
+
+    Splash Screen: Added SplashScreenView class for a pre-game splash screen.
+
+GameController:
+
+    Enhanced functionality with new fields and methods for improved game flow and user experience.
+
+MenuController:
+
+    Added gameStart boolean to manage available functions during gameplay.
+
+ShipController:
+
+    Added initializeGridListeners() for enhanced action handling.
+    Consolidated ship placement methods into BattleshipModel for improved clarity.
+
+BattleshipModel:
+
+    Re-factored grid handling into a 2D array structure.
+    Introduced state-tracking integers for hits, misses, and game outcomes.
+    Added methods for win condition checks and game reset.
+
+CoordinateModel:
+
+    Re-factored coordinate identifiers for improved clarity.
+
+ShipModel:
+
+    Enhanced ship management with boolean flags and hit tracking.
+
+BattleshipView:
+
+    Expanded functionality with new methods for UI updates and localization support.

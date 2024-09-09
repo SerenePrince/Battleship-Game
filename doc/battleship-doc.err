@@ -1,0 +1,347 @@
+Loading source files for package battleship...
+Constructing Javadoc information...
+Building index for all the packages and classes...
+Standard Doclet version 21.0.3+9-LTS
+Building tree for all the packages and classes...
+Generating doc\battleship\controller\BattleshipController.html...
+Generating doc\battleship\model\BattleshipModel.html...
+src\battleship\model\BattleshipModel.java:79: warning: no @param for loses
+	public void setLoses(int loses) {
+	            ^
+src\battleship\model\BattleshipModel.java:137: warning: no @param for wins
+	public void setWins(int wins) {
+	            ^
+src\battleship\model\BattleshipModel.java:26: warning: no comment
+	public static final int EMPTY = 0;
+	                        ^
+src\battleship\model\BattleshipModel.java:27: warning: no comment
+	public static final int HIT = 3;
+	                        ^
+src\battleship\model\BattleshipModel.java:28: warning: no comment
+	public static final int MISS = 2;
+	                        ^
+src\battleship\model\BattleshipModel.java:29: warning: no comment
+	public static final int OCCUPIED = 1;
+	                        ^
+Generating doc\battleship\view\BattleshipView.html...
+src\battleship\view\BattleshipView.java:783: warning: no description for @param
+	 * @param backgroundColor
+	   ^
+src\battleship\view\BattleshipView.java:792: warning: no description for @param
+	 * @param textColor
+	   ^
+src\battleship\view\BattleshipView.java:1276: warning: no comment
+	public BattleshipController getController() {
+	                            ^
+Generating doc\battleship\controller\ChatController.html...
+Generating doc\battleship\model\CoordinateModel.html...
+src\battleship\model\CoordinateModel.java:42: error: @param name not found
+	 * @param col The new column index.
+	          ^
+src\battleship\model\CoordinateModel.java:44: warning: no @param for column
+	public void setColumn(int column) {
+	            ^
+Generating doc\battleship\FontLoader.html...
+src\battleship\FontLoader.java:26: warning: use of default constructor, which does not provide a comment
+public class FontLoader {
+       ^
+Generating doc\battleship\controller\GameController.html...
+src\battleship\controller\GameController.java:29: warning: no comment
+	public boolean playerTurn = true;
+	               ^
+src\battleship\controller\GameController.java:30: warning: no comment
+	public boolean showingPlayerGrid;
+	               ^
+Generating doc\battleship\LocalizationLoader.html...
+Generating doc\battleship\Main.html...
+src\battleship\Main.java:31: error: exception not thrown: java.net.UnknownHostException
+	 * @throws UnknownHostException
+	           ^
+src\battleship\Main.java:31: warning: no description for @throws
+	 * @throws UnknownHostException
+	   ^
+src\battleship\Main.java:25: warning: use of default constructor, which does not provide a comment
+public class Main {
+       ^
+Generating doc\battleship\controller\MenuController.html...
+src\battleship\controller\MenuController.java:21: warning: no comment
+	public boolean gameStart = false;
+	               ^
+Generating doc\battleship\controller\ServerController.html...
+Generating doc\battleship\controller\ServerController.MessageType.html...
+src\battleship\controller\ServerController.java:31: warning: no comment
+		NAME, PLACE, MOVE, CHAT, START, RESTART, DISCONNECT
+		                   ^
+src\battleship\controller\ServerController.java:31: warning: no comment
+		NAME, PLACE, MOVE, CHAT, START, RESTART, DISCONNECT
+		                                         ^
+src\battleship\controller\ServerController.java:31: warning: no comment
+		NAME, PLACE, MOVE, CHAT, START, RESTART, DISCONNECT
+		             ^
+src\battleship\controller\ServerController.java:31: warning: no comment
+		NAME, PLACE, MOVE, CHAT, START, RESTART, DISCONNECT
+		^
+src\battleship\controller\ServerController.java:31: warning: no comment
+		NAME, PLACE, MOVE, CHAT, START, RESTART, DISCONNECT
+		      ^
+src\battleship\controller\ServerController.java:31: warning: no comment
+		NAME, PLACE, MOVE, CHAT, START, RESTART, DISCONNECT
+		                                ^
+src\battleship\controller\ServerController.java:31: warning: no comment
+		NAME, PLACE, MOVE, CHAT, START, RESTART, DISCONNECT
+		                         ^
+Generating doc\battleship\controller\ShipController.html...
+src\battleship\controller\ShipController.java:38: warning: no main description
+	 * @param model 	 The BattleshipModel instance.
+	   ^
+Generating doc\battleship\model\ShipModel.html...
+Generating doc\battleship\view\SplashScreenView.html...
+Generating doc\battleship\package-summary.html...
+Generating doc\battleship\package-tree.html...
+Generating doc\battleship\controller\package-summary.html...
+Generating doc\battleship\controller\package-tree.html...
+Generating doc\battleship\model\package-summary.html...
+Generating doc\battleship\model\package-tree.html...
+Generating doc\battleship\view\package-summary.html...
+Generating doc\battleship\view\package-tree.html...
+Generating doc\constant-values.html...
+Generating doc\serialized-form.html...
+src\battleship\model\BattleshipModel.java:31: warning: no comment
+	private BattleshipController controller;
+	                             ^
+src\battleship\model\BattleshipModel.java:35: warning: no comment
+	private ImageIcon hitIndicator = new ImageIcon("resources/images/hit.png");
+	                  ^
+src\battleship\model\BattleshipModel.java:32: warning: no comment
+	private LocalizationLoader loader;
+	                           ^
+src\battleship\model\BattleshipModel.java:44: warning: no comment
+	private int loses;
+	            ^
+src\battleship\model\BattleshipModel.java:36: warning: no comment
+	private ImageIcon missIndicator = new ImageIcon("resources/images/miss.png");
+	                  ^
+src\battleship\model\BattleshipModel.java:38: warning: no comment
+	private List<ShipModel> opponentFleet;
+	                        ^
+src\battleship\model\BattleshipModel.java:39: warning: no comment
+	private int[][] opponentGrid;
+	                ^
+src\battleship\model\BattleshipModel.java:41: warning: no comment
+	private List<ShipModel> playerFleet;
+	                        ^
+src\battleship\model\BattleshipModel.java:42: warning: no comment
+	private int[][] playerGrid;
+	                ^
+src\battleship\model\BattleshipModel.java:33: warning: no comment
+	private BattleshipView view;
+	                       ^
+src\battleship\model\BattleshipModel.java:45: warning: no comment
+	private int wins;
+	            ^
+src\battleship\view\BattleshipView.java:50: warning: no comment
+	private Color backgroundColor = Color.BLACK;
+	              ^
+src\battleship\view\BattleshipView.java:60: warning: no comment
+	private JTextArea chatHistory;
+	                  ^
+src\battleship\view\BattleshipView.java:61: warning: no comment
+	private JTextField chatInput;
+	                   ^
+src\battleship\view\BattleshipView.java:59: warning: no comment
+	private JPanel chatPanel;
+	               ^
+src\battleship\view\BattleshipView.java:99: warning: no comment
+	private JTextField clientAddressInput;
+	                   ^
+src\battleship\view\BattleshipView.java:98: warning: no comment
+	private JLabel clientAddressLabel;
+	               ^
+src\battleship\view\BattleshipView.java:101: warning: no comment
+	private JButton clientCloseButton;
+	                ^
+src\battleship\view\BattleshipView.java:100: warning: no comment
+	private JButton clientJoinButton;
+	                ^
+src\battleship\view\BattleshipView.java:95: warning: no comment
+	private JTextField clientNameInput;
+	                   ^
+src\battleship\view\BattleshipView.java:94: warning: no comment
+	private JLabel clientNameLabel;
+	               ^
+src\battleship\view\BattleshipView.java:97: warning: no comment
+	private JTextField clientPortInput;
+	                   ^
+src\battleship\view\BattleshipView.java:96: warning: no comment
+	private JLabel clientPortLabel;
+	               ^
+src\battleship\view\BattleshipView.java:93: warning: no comment
+	private JWindow clientWindow;
+	                ^
+src\battleship\view\BattleshipView.java:46: warning: no comment
+	private BattleshipController controller;
+	                             ^
+src\battleship\view\BattleshipView.java:117: warning: no comment
+	private JMenu game;
+	              ^
+src\battleship\view\BattleshipView.java:70: warning: no comment
+	private JPanel gameInfoPanel;
+	               ^
+src\battleship\view\BattleshipView.java:118: warning: no comment
+	private JMenuItem gameItem1;
+	                  ^
+src\battleship\view\BattleshipView.java:119: warning: no comment
+	private JMenuItem gameItem2;
+	                  ^
+src\battleship\view\BattleshipView.java:120: warning: no comment
+	private JMenuItem gameItem3;
+	                  ^
+src\battleship\view\BattleshipView.java:121: warning: no comment
+	private JMenuItem gameItem4;
+	                  ^
+src\battleship\view\BattleshipView.java:63: warning: no comment
+	private JPanel gamePanel;
+	               ^
+src\battleship\view\BattleshipView.java:65: warning: no comment
+	private JButton[][] gridButtons;
+	                    ^
+src\battleship\view\BattleshipView.java:66: warning: no comment
+	private JLabel[] gridColLabels;
+	                 ^
+src\battleship\view\BattleshipView.java:64: warning: no comment
+	private JPanel gridPanel;
+	               ^
+src\battleship\view\BattleshipView.java:67: warning: no comment
+	private JLabel[] gridRowLabels;
+	                 ^
+src\battleship\view\BattleshipView.java:123: warning: no comment
+	private ImageIcon hitIndicator = new ImageIcon("resources/images/hit.png");
+	                  ^
+src\battleship\view\BattleshipView.java:126: warning: no comment
+	private ImageIcon horizontalShipBody = new ImageIcon(getClass().getResource("/resources/images/HShipBody.png"));
+	                  ^
+src\battleship\view\BattleshipView.java:127: warning: no comment
+	private ImageIcon horizontalShipEnd = new ImageIcon(getClass().getResource("/resources/images/HShipEnd.png"));
+	                  ^
+src\battleship\view\BattleshipView.java:125: warning: no comment
+	private ImageIcon horizontalShipHead = new ImageIcon(getClass().getResource("/resources/images/HShipHead.png"));
+	                  ^
+src\battleship\view\BattleshipView.java:92: warning: no comment
+	private JButton hostCloseButton;
+	                ^
+src\battleship\view\BattleshipView.java:88: warning: no comment
+	private JTextField hostNameInput;
+	                   ^
+src\battleship\view\BattleshipView.java:87: warning: no comment
+	private JLabel hostNameLabel;
+	               ^
+src\battleship\view\BattleshipView.java:90: warning: no comment
+	private JTextField hostPortInput;
+	                   ^
+src\battleship\view\BattleshipView.java:89: warning: no comment
+	private JLabel hostPortLabel;
+	               ^
+src\battleship\view\BattleshipView.java:91: warning: no comment
+	private JButton hostStartButton;
+	                ^
+src\battleship\view\BattleshipView.java:86: warning: no comment
+	private JWindow hostWindow;
+	                ^
+src\battleship\view\BattleshipView.java:113: warning: no comment
+	private JMenu info;
+	              ^
+src\battleship\view\BattleshipView.java:114: warning: no comment
+	private JMenuItem infoItem1;
+	                  ^
+src\battleship\view\BattleshipView.java:115: warning: no comment
+	private JMenuItem infoItem2;
+	                  ^
+src\battleship\view\BattleshipView.java:69: warning: no comment
+	private JPanel infoPanel;
+	               ^
+src\battleship\view\BattleshipView.java:71: warning: no comment
+	private JPanel infoPanels;
+	               ^
+src\battleship\view\BattleshipView.java:48: warning: no comment
+	private LocalizationLoader loader;
+	                           ^
+src\battleship\view\BattleshipView.java:75: warning: no comment
+	private JLabel logoLabel;
+	               ^
+src\battleship\view\BattleshipView.java:76: warning: no comment
+	private JPanel logoPanel;
+	               ^
+src\battleship\view\BattleshipView.java:77: warning: no comment
+	private JLabel loseLabel;
+	               ^
+src\battleship\view\BattleshipView.java:103: warning: no comment
+	private JMenuBar menuBar;
+	                 ^
+src\battleship\view\BattleshipView.java:124: warning: no comment
+	private ImageIcon missIndicator = new ImageIcon("resources/images/miss.png");
+	                  ^
+src\battleship\view\BattleshipView.java:47: warning: no comment
+	private BattleshipModel model;
+	                        ^
+src\battleship\view\BattleshipView.java:82: warning: no comment
+	private JLabel opponentInfoLabel;
+	               ^
+src\battleship\view\BattleshipView.java:84: warning: no comment
+	private JLabel[] opponentInfoLabels;
+	                 ^
+src\battleship\view\BattleshipView.java:73: warning: no comment
+	private JPanel opponentInfoPanel;
+	               ^
+src\battleship\view\BattleshipView.java:81: warning: no comment
+	private JLabel playerInfoLabel;
+	               ^
+src\battleship\view\BattleshipView.java:83: warning: no comment
+	private JLabel[] playerInfoLabels;
+	                 ^
+src\battleship\view\BattleshipView.java:72: warning: no comment
+	private JPanel playerInfoPanel;
+	               ^
+src\battleship\view\BattleshipView.java:105: warning: no comment
+	private JMenu settings;
+	              ^
+src\battleship\view\BattleshipView.java:106: warning: no comment
+	private JMenuItem settingsItem1;
+	                  ^
+src\battleship\view\BattleshipView.java:107: warning: no comment
+	private JMenuItem settingsItem2;
+	                  ^
+src\battleship\view\BattleshipView.java:108: warning: no comment
+	private JMenuItem settingsItem3;
+	                  ^
+src\battleship\view\BattleshipView.java:109: warning: no comment
+	private JMenuItem settingsItem4;
+	                  ^
+src\battleship\view\BattleshipView.java:110: warning: no comment
+	private JMenuItem settingsItem5;
+	                  ^
+src\battleship\view\BattleshipView.java:111: warning: no comment
+	private JMenuItem settingsItem6;
+	                  ^
+src\battleship\view\BattleshipView.java:51: warning: no comment
+	private Color textColor = new Color(0x00FF00);
+	              ^
+src\battleship\view\BattleshipView.java:80: warning: no comment
+	private JLabel timeLabel;
+	               ^
+src\battleship\view\BattleshipView.java:79: warning: no comment
+	private JLabel turnLabel;
+	               ^
+src\battleship\view\BattleshipView.java:129: warning: no comment
+	private ImageIcon verticalShipBody = new ImageIcon(getClass().getResource("/resources/images/VShipBody.png"));
+	                  ^
+Generating doc\overview-tree.html...
+Generating doc\index.html...
+Building index for all classes...
+Generating doc\allclasses-index.html...
+Generating doc\allpackages-index.html...
+Generating doc\index-all.html...
+Generating doc\search.html...
+Generating doc\overview-summary.html...
+Generating doc\help-doc.html...
+2 errors
+100 warnings

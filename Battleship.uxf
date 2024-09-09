@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1.0">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>312</x>
+      <y>800</y>
+      <w>208</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>LocalizationLoader
+--
+language: String
+locale: Locale
+resourceBundle: ResourceBundle
+--
+getLanguage(): String
+getResourceBundle(): ResourceBundle
+switchLanguage(language: String): void
+
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>312</x>
+      <y>672</y>
+      <w>168</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>SplashScreenView
+--
+BACKGROUND_COLOR: Color
+FONT_SIZE: float
+TEXT_COLOR: Color
+agencyBold94: Font
+--
+initializeFont(): void
+initializeSplashPanel(): void
+setupFrame(): void
+
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>672</y>
+      <w>304</w>
+      <h>392</h>
+    </coordinates>
+    <panel_attributes>BattleshipView
+--
+controller: BattleshipController
+model: BattleshipModel
+loader: LocalizationLoader
+chatHistory: JTextArea
+chatInput: JTextField
+gridButtons: JButton[][]
+timeLabel: JLabel
+--
+initializeFonts(): void
+initializeGamePanel(): void
+initializeInfoPanel(): void
+initializeMenu(): void
+createChatPanel(): JPanel
+setController(controller: BattleshipController): void
+setModel(model: BattleshipModel): void
+setTimeLabel(timeLabel: JLabel): void
+updateGridView(): void
+updateOpponentInfo(opponentFleet: List&lt;ShipModel&gt;): void
+updatePlayerInfo(playerFleet: List&lt;ShipModel&gt;): void
+updateStartMenu(): void
+updateTimeLabel(): void
+updateTurnLabel(): void
+updateWinLoseLabel(): void
+viewOpponentGrid(): void
+getChatHistory(): JTextArea
+getChatInput(): JTextField
+getGridButtons(): JButton[][]
+getTimeLabel(): JLabel
+reloadText(): void
+
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>312</x>
+      <y>912</y>
+      <w>248</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>FontLoader
+--
+--
+loadFont(path: String, size: float): Font
+loadFont(path: String, style: int, size: float): Font
+
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>312</x>
+      <y>976</y>
+      <w>128</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Main
+--
+--
+main(args: String[]): void
+
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1096</x>
+      <y>1072</y>
+      <w>152</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>CoordinateModel
+--
+column: int
+row: int
+--
+getColumn(): int
+getRow(): int
+setColumn(column: int): void
+setRow(row: int): void
+
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1096</x>
+      <y>688</y>
+      <w>312</w>
+      <h>376</h>
+    </coordinates>
+    <panel_attributes>ShipModel
+--
+controller: BattleshipController
+loader: LocalizationLoader
+coordinateHead: CoordinateModel
+coordinates: List&lt;CoordinateModel&gt;
+name: String
+length: int
+isHorizontal: boolean
+isPlaced: boolean
+hits: int
+--
+registerHit(row: int, col: int): boolean
+isSunk(): boolean
+setController(controller: BattleshipController): void
+setLoader(loader: LocalizationLoader): void
+setCoordinateHead(coordinateHead: CoordinateModel): void
+setName(name: String): void
+setLength(length: int): void
+setHorizontal(isHorizontal: boolean): void
+setPlaced(isPlaced: boolean): void
+setHits(hits: int): void
+getCoordinateHead(): CoordinateModel
+getCoordinates(): List&lt;CoordinateModel&gt;
+getName(): String
+getLength(): int
+isHorizontal(): boolean
+isPlaced(): boolean
+getHits(): int
+addCoordinate(row: int, col: int): void
+
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>616</x>
+      <y>688</y>
+      <w>472</w>
+      <h>616</h>
+    </coordinates>
+    <panel_attributes>BattleshipModel
+--
+EMPTY: int
+HIT: int
+MISS: int
+OCCUPIED: int
+view: BattleshipView
+controller: BattleshipController
+loader: LocalizationLoader
+hitIndicator: ImageIcon
+missIndicator: ImageIcon
+playerFleet: List&lt;ShipModel&gt;
+opponentFleet: List&lt;ShipModel&gt;
+playerGrid: int[][]
+opponentGrid: int[][]
+wins: int
+losses: int
+--
+initializeFleet(fleet: List&lt;ShipModel&gt;): void
+initializeGrid(grid: int[][]): void
+placeShip(grid: int[][], ship: ShipModel, row: int, col: int, length: int, isHorizontal: boolean): void
+placeOpponentShipsRandomly(): void
+canPlaceShip(grid: int[][], row: int, col: int, length: int, isHorizontal: boolean): boolean
+playerFire(row: int, col: int): int
+playerFires(row: int, col: int): void
+opponentFire(row: int, col: int): void
+opponentFires(row: int, col: int): void
+isFleetSunk(fleet: List&lt;ShipModel&gt;): boolean
+playerWon(): boolean
+opponentWon(): boolean
+isGameOver(): boolean
+checkGameOver(): void
+resetModel(): void
+setController(controller: BattleshipController): void
+setView(view: BattleshipView): void
+setPlayerFleet(playerFleet: List&lt;ShipModel&gt;): void
+setPlayerGrid(playerGrid: int[][]): void
+setOpponentFleet(opponentFleet: List&lt;ShipModel&gt;): void
+setOpponentGrid(opponentGrid: int[][]): void
+setWins(wins: int): void
+setLosses(losses: int): void
+getController(): BattleshipController
+getView(): BattleshipView
+getPlayerFleet(): List&lt;ShipModel&gt;
+getPlayerGrid(): int[][]
+getOpponentFleet(): List&lt;ShipModel&gt;
+getOpponentGrid(): int[][]
+getWins(): int
+getLosses(): int
+
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>464</x>
+      <y>72</y>
+      <w>216</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>BattleshipController
+--
+chatController: ChatController
+gameController: GameController
+menuController: MenuController
+shipController: ShipController
+networkController: NetworkController
+hostController: HostController
+clientController: ClientController
+--
+getChatController(): ChatController
+getGameController(): GameController
+getMenuController(): MenuController
+getShipController(): ShipController
+getHostController(): HostController
+getClientController(): ClientController
+
+bg=green
+group=group-0</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>688</x>
+      <y>72</y>
+      <w>296</w>
+      <h>312</h>
+    </coordinates>
+    <panel_attributes>GameController
+--
+controller: BattleshipController
+loader: LocalizationLoader
+model: BattleshipModel
+view: BattleshipView
+playerTurn: boolean
+showingPlayerGrid: boolean
+timer: Timer
+timeRemaining: int
+hitIndicator: ImageIcon
+--
+getTimer(): Timer
+getTimerRemaining(): int
+isShowingPlayerGrid(): boolean
+setTimeRemaining(timeRemaining: int): void
+setShowingPlayerGrid(showingPlayerGrid: boolean): void
+startGame(): void
+playerFires(): void
+swapGridView(): void
+disableButtons(): void
+enableButtons(): void
+handleLeftClick(row: int, col: int): void
+handleMouseExit(row: int, col: int): void
+handleMouseHover(row: int, col: int): void
+
+bg=green
+group=group-0</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>448</x>
+      <y>272</y>
+      <w>232</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>ChatController
+--
+view: BattleshipView
+--
+initializeChatInputLIstener(): void
+receiveChatMessage(message: String) : void
+sendChatMessage(message: String): void
+
+bg=green
+group=group-0</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>992</x>
+      <y>240</y>
+      <w>160</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>HostController
+--
+name: String
+port: int
+resetFlag: int
+--
+displayHostPanel(): void
+startHost(): void
+sendData(data: String): void
+receiveData(data: String): void
+disconnect(): void
+reset(): void
+
+bg=green
+group=group-0</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>360</y>
+      <w>240</w>
+      <h>232</h>
+    </coordinates>
+    <panel_attributes>MenuController
+--
+controller: BattleshipController
+gameStart: boolean
+loader: LocalizationLoader
+model: BattleshipModel
+view: BattleshipView
+--
+hostGame(e: ActionEvent): void
+joinGame(e: ActionEvent): void
+disconnect(e: ActionEvent): void
+startOrRestartGame(e: ActionEvent): void
+exitGame(e: ActionEvent): void
+saveGame(e: ActionEvent): void
+loadGame(e: ActionEvent): void
+switchLanguage(e: ActionEvent): void
+changeBackgroundColor(e: ActionEvent): void
+swapGridView(e: ActionEvent): void
+displayAbout(e: ActionEvent): void
+displayHelp(e: ActionEvent): void
+
+bg=green
+group=group-0</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>992</x>
+      <y>96</y>
+      <w>160</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>ClientController
+--
+name: String
+port: int
+address: String
+--
+displayClientPanel(): void
+connect(): void
+sendData(data: String): void
+receiveData(data: String): void
+disconnect(): void
+
+bg=green
+group=group-0</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>688</x>
+      <y>392</y>
+      <w>376</w>
+      <h>248</h>
+    </coordinates>
+    <panel_attributes>ShipController
+--
+controller: BattleshipController
+model: BattleshipModel
+horizontalOrientation: boolean
+horizontalShipBody: ImageIcon
+horizontalShipEnd: ImageIcon
+horizontalShipHead: ImageIcon
+verticalShipBody: ImageIcon
+verticalShipEnd: ImageIcon
+verticalShipHead: ImageIcon
+--
+initializeGridListeners(): void
+handleLeftClick(row: int, col: int): void
+handleMouseExit(row: int, col: int): void
+handleMouseHover(row: int, col: int): void
+handleRightClick(row: int, col: int): void
+getNextShip(): ShipModel
+placeShipOnGrid(row: int, col: int, length: int, isHorizontal: boolean): void
+resetGrid(): void
+
+bg=green
+group=group-0</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

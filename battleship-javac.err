@@ -1,0 +1,34 @@
+src\battleship\controller\BattleshipController.java:28: warning: [this-escape] possible 'this' escape before subclass is fully initialized
+		this.menuController = new MenuController(loader, model, view, this);
+		                                                              ^
+src\battleship\controller\ServerController.java:99: warning: [this-escape] possible 'this' escape before subclass is fully initialized
+		Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+		                                                ^
+src\battleship\model\BattleshipModel.java:31: warning: [serial] non-transient instance field of a serializable class declared with a non-serializable type
+	private BattleshipController controller;
+	                             ^
+src\battleship\model\BattleshipModel.java:32: warning: [serial] non-transient instance field of a serializable class declared with a non-serializable type
+	private LocalizationLoader loader;
+	                           ^
+src\battleship\model\BattleshipModel.java:38: warning: [serial] non-transient instance field of a serializable class declared with a non-serializable type
+	private List<ShipModel> opponentFleet;
+	                        ^
+src\battleship\model\BattleshipModel.java:41: warning: [serial] non-transient instance field of a serializable class declared with a non-serializable type
+	private List<ShipModel> playerFleet;
+	                        ^
+src\battleship\view\BattleshipView.java:46: warning: [serial] non-transient instance field of a serializable class declared with a non-serializable type
+	private BattleshipController controller;
+	                             ^
+src\battleship\view\BattleshipView.java:48: warning: [serial] non-transient instance field of a serializable class declared with a non-serializable type
+	private LocalizationLoader loader;
+	                           ^
+src\battleship\view\BattleshipView.java:142: warning: [this-escape] possible 'this' escape before subclass is fully initialized
+		setPreferredSize(new Dimension(1280, 714));
+		                ^
+src\battleship\view\SplashScreenView.java:35: warning: [this-escape] possible 'this' escape before subclass is fully initialized
+		initializeSplashPanel();
+		                     ^
+src\battleship\view\SplashScreenView.java:59: warning: [this-escape] previous possible 'this' escape happens here via invocation
+		add(splashPanel);
+		   ^
+11 warnings
