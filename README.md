@@ -15,8 +15,8 @@ This Battleship game project was developed as part of an assignment for the Java
 To compile and play the game, follow these steps:
 
 1. **Compile the Program**: 
-   - Locate the `compile.bat` batch script in the project directory.
-   - Double-click the `compile.bat` file to compile the source code.
+   - Locate the `CompileScript.bat` batch script in the project directory.
+   - Double-click the `CompileScript.bat` file to compile the source code.
 
 2. **Run the Game**:
    - After compilation, run the game using the provided executable or by following the instructions in the compiled output directory.
